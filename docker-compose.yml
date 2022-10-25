@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  ansible:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ansible:latest
+    container_name: ansible
+    environment:
+      - ANSIBLE_CONFIG=/opt/conf/ansible.cfg
+    volumes:
+      - ./ansible_dir:/opt/
+    working_dir: /opt/playbook
+    command: tail -f /dev/null
