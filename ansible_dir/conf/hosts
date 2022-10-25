@@ -1,0 +1,7 @@
+[test]
+localhost
+192.168.1.8
+
+[all:vars]
+ansible_user=root
+ansible_password=p@ssw0rd
